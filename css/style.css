@@ -1,0 +1,79 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #780000;
+  --winning-blocks: #669bbc;
+  font-family: 'Shantell Sans', cursive;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+  width: 25%;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+.container {
+  padding: 40px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 54px;
+  text-transform: uppercase;
+  color:#c1121f;
+}
+.game-board {
+  width: 500px;
+	height: 600px;
+	margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.box { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  background-color: #003049;
+  color: #fff;
+  border: 6px solid #003049;
+  border-radius: 10px;
+  font-size: 96px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--red);
+  color: #fff;
+  font-size: 18px;
+  transition: 200ms transform;
+  font-weight: 600;
+}
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
